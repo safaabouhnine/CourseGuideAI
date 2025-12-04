@@ -1,0 +1,18 @@
+# Web Sémantique
+rdflib==7.0.0
+owlready2==0.45
+
+# NLP
+spacy==3.7.2
+transformers==4.36.0
+torch==2.4.0
+sentence-transformers==2.2.2
+
+# Chatbot & Interface
+streamlit==1.29.0
+langchain==0.1.0
+
+# Utilitaires
+pandas==2.1.4
+numpy==1.26.2
+python-dotenv==1.0.0
