@@ -1,0 +1,16 @@
+code,nom,domaine,niveau,credits,duree,difficulte,description
+PROG-101,Introduction à la Programmation,Informatique,Debutant,6,45,2,Bases de la programmation en Python avec structures de données
+PROG-201,Programmation Avancée,Informatique,Intermediaire,6,50,4,POO et design patterns en Python
+MATH-101,Algèbre Linéaire,Mathematiques,Debutant,5,40,3,Vecteurs matrices et systèmes linéaires
+MATH-201,Mathématiques pour l'IA,Mathematiques,Intermediaire,6,45,4,Probabilités statistiques et calcul différentiel
+MATH-301,Optimisation,Mathematiques,Avance,5,40,5,Optimisation convexe et non-convexe
+IA-301,Introduction à l'IA,IntelligenceArtificielle,Intermediaire,6,50,3,Algorithmes de ML de base et apprentissage supervisé
+IA-401,Deep Learning,IntelligenceArtificielle,Avance,6,55,5,Réseaux de neurones profonds et CNN
+IA-501,IA Avancée et Recherche,IntelligenceArtificielle,Avance,7,60,5,Sujets avancés en IA et méthodologie de recherche
+WEB-201,Développement Web,DeveloppementWeb,Intermediaire,5,40,3,HTML CSS JavaScript et frameworks modernes
+WEB-301,Développement Web Avancé,DeveloppementWeb,Avance,6,45,4,React Node.js bases de données et déploiement
+BDD-201,Bases de Données,BaseDeDonnees,Intermediaire,5,40,3,SQL modélisation et conception de BDD
+BDD-301,Bases de Données Avancées,BaseDeDonnees,Avance,5,45,4,NoSQL optimisation et Big Data
+CLOUD-301,Cloud Computing,Informatique,Avance,6,50,4,AWS Azure architecture cloud native
+SECURITY-301,Cybersécurité,Informatique,Avance,5,45,4,Sécurité des applications et des réseaux
+MOBILE-301,Développement Mobile,Informatique,Avance,6,50,4,iOS Android et développement cross-platform

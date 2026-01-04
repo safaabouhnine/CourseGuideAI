@@ -1,0 +1,245 @@
+@prefix : <http://www.semanticweb.org/hp/ontologies/2025/11/untitled-ontology-4/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/hp/ontologies/2025/11/untitled-ontology-4/> .
+
+<http://www.university.edu/ontology/courses> rdf:type owl:Ontology ;
+                                              owl:versionIRI <http://www.university.edu/ontology/courses/1.0.0> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.university.edu/ontology/courses#aInteretPour
+:aInteretPour rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Student ;
+              rdfs:range :Domain .
+
+
+###  http://www.university.edu/ontology/courses#aNiveau
+:aNiveau rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :Course ;
+         rdfs:range :Level .
+
+
+###  http://www.university.edu/ontology/courses#aPrerequis
+:aPrerequis rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Course ;
+            rdfs:range :Course .
+
+
+###  http://www.university.edu/ontology/courses#aSuivi
+:aSuivi rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain :Student ;
+        rdfs:range :Course .
+
+
+###  http://www.university.edu/ontology/courses#appartientADomaine
+:appartientADomaine rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :Course ;
+                    rdfs:range :Domain .
+
+
+###  http://www.university.edu/ontology/courses#enseigneCompetence
+:enseigneCompetence rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :Course ;
+                    rdfs:range :Skill .
+
+
+###  http://www.university.edu/ontology/courses#possèdeCompetence
+:possèdeCompetence rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain :Student ;
+                   rdfs:range :Skill .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.university.edu/ontology/courses#codeCours
+:codeCours rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Course ;
+           rdfs:range xsd:string .
+
+
+###  http://www.university.edu/ontology/courses#credits
+:credits rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Course ;
+         rdfs:range xsd:integer .
+
+
+###  http://www.university.edu/ontology/courses#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Course ;
+             rdfs:range xsd:string .
+
+
+###  http://www.university.edu/ontology/courses#difficulte
+:difficulte rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Course ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.university.edu/ontology/courses#duree
+:duree rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain :Course ;
+       rdfs:range xsd:integer .
+
+
+###  http://www.university.edu/ontology/courses#emailEtudiant
+:emailEtudiant rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Student ;
+               rdfs:range xsd:string .
+
+
+###  http://www.university.edu/ontology/courses#nomCompetence
+:nomCompetence rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Skill ;
+               rdfs:range xsd:string .
+
+
+###  http://www.university.edu/ontology/courses#nomCours
+:nomCours rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Course ;
+          rdfs:range xsd:string .
+
+
+###  http://www.university.edu/ontology/courses#nomDomaine
+:nomDomaine rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Domain ;
+            rdfs:range xsd:string .
+
+
+###  http://www.university.edu/ontology/courses#nomEtudiant
+:nomEtudiant rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Student ;
+             rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.university.edu/ontology/courses#Course
+:Course rdf:type owl:Class .
+
+
+###  http://www.university.edu/ontology/courses#CourseBDD
+:CourseBDD rdf:type owl:Class ;
+           rdfs:subClassOf :CourseInformatique .
+
+
+###  http://www.university.edu/ontology/courses#CourseIA
+:CourseIA rdf:type owl:Class ;
+          rdfs:subClassOf :CourseInformatique .
+
+
+###  http://www.university.edu/ontology/courses#CourseInformatique
+:CourseInformatique rdf:type owl:Class ;
+                    rdfs:subClassOf :Course .
+
+
+###  http://www.university.edu/ontology/courses#CourseMathematiques
+:CourseMathematiques rdf:type owl:Class ;
+                     rdfs:subClassOf :Course .
+
+
+###  http://www.university.edu/ontology/courses#CourseWeb
+:CourseWeb rdf:type owl:Class ;
+           rdfs:subClassOf :CourseInformatique .
+
+
+###  http://www.university.edu/ontology/courses#Domain
+:Domain rdf:type owl:Class .
+
+
+###  http://www.university.edu/ontology/courses#Level
+:Level rdf:type owl:Class .
+
+
+###  http://www.university.edu/ontology/courses#Skill
+:Skill rdf:type owl:Class .
+
+
+###  http://www.university.edu/ontology/courses#Student
+:Student rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.university.edu/ontology/courses#IA-301
+:IA-301 rdf:type owl:NamedIndividual ,
+                 :CourseIA ;
+        :aPrerequis :PROG-101 ;
+        :codeCours "IA-401" ;
+        :credits 6 ;
+        :difficulte 3 ;
+        :duree 50 ;
+        :nomCours "Introduction à l'IA" .
+
+
+###  http://www.university.edu/ontology/courses#IA-401
+:IA-401 rdf:type owl:NamedIndividual ,
+                 :CourseIA ;
+        :aPrerequis :IA-301 ;
+        :codeCours "IA-401" ;
+        :credits 6 ;
+        :difficulte 5 ;
+        :duree 55 ;
+        :nomCours "Deep Learning" .
+
+
+###  http://www.university.edu/ontology/courses#MATH-101
+:MATH-101 rdf:type owl:NamedIndividual ,
+                   :CourseMathematiques ;
+          :codeCours "MATH-101" ;
+          :credits 5 ;
+          :difficulte 3 ;
+          :duree 40 ;
+          :nomCours "Algèbre Linéaire" .
+
+
+###  http://www.university.edu/ontology/courses#PROG-101
+:PROG-101 rdf:type owl:NamedIndividual ,
+                   :Course ;
+          :codeCours "PROG-101" ;
+          :credits 6 ;
+          :description "Bases de Python" ;
+          :difficulte 2 ;
+          :duree 45 ;
+          :nomCours "Introduction à la Programmation" .
+
+
+###  http://www.university.edu/ontology/courses#WEB-201
+:WEB-201 rdf:type owl:NamedIndividual ,
+                  :CourseWeb ;
+         :codeCours "WEB-201" ;
+         :credits 5 ;
+         :difficulte 3 ;
+         :duree 40 ;
+         :nomCours "Développement Web" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

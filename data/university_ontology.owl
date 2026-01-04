@@ -1,0 +1,235 @@
+Prefix(:=<http://www.semanticweb.org/hp/ontologies/2025/11/untitled-ontology-4/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.university.edu/ontology/courses>
+<http://www.university.edu/ontology/courses/1.0.0>
+
+Declaration(Class(<http://www.university.edu/ontology/courses#Course>))
+Declaration(Class(<http://www.university.edu/ontology/courses#CourseBDD>))
+Declaration(Class(<http://www.university.edu/ontology/courses#CourseIA>))
+Declaration(Class(<http://www.university.edu/ontology/courses#CourseInformatique>))
+Declaration(Class(<http://www.university.edu/ontology/courses#CourseMathematiques>))
+Declaration(Class(<http://www.university.edu/ontology/courses#CourseWeb>))
+Declaration(Class(<http://www.university.edu/ontology/courses#Domain>))
+Declaration(Class(<http://www.university.edu/ontology/courses#Level>))
+Declaration(Class(<http://www.university.edu/ontology/courses#Skill>))
+Declaration(Class(<http://www.university.edu/ontology/courses#Student>))
+Declaration(ObjectProperty(<http://www.university.edu/ontology/courses#aInteretPour>))
+Declaration(ObjectProperty(<http://www.university.edu/ontology/courses#aNiveau>))
+Declaration(ObjectProperty(<http://www.university.edu/ontology/courses#aPrerequis>))
+Declaration(ObjectProperty(<http://www.university.edu/ontology/courses#aSuivi>))
+Declaration(ObjectProperty(<http://www.university.edu/ontology/courses#appartientADomaine>))
+Declaration(ObjectProperty(<http://www.university.edu/ontology/courses#enseigneCompetence>))
+Declaration(ObjectProperty(<http://www.university.edu/ontology/courses#possèdeCompetence>))
+Declaration(DataProperty(<http://www.university.edu/ontology/courses#codeCours>))
+Declaration(DataProperty(<http://www.university.edu/ontology/courses#credits>))
+Declaration(DataProperty(<http://www.university.edu/ontology/courses#description>))
+Declaration(DataProperty(<http://www.university.edu/ontology/courses#difficulte>))
+Declaration(DataProperty(<http://www.university.edu/ontology/courses#duree>))
+Declaration(DataProperty(<http://www.university.edu/ontology/courses#emailEtudiant>))
+Declaration(DataProperty(<http://www.university.edu/ontology/courses#nomCompetence>))
+Declaration(DataProperty(<http://www.university.edu/ontology/courses#nomCours>))
+Declaration(DataProperty(<http://www.university.edu/ontology/courses#nomDomaine>))
+Declaration(DataProperty(<http://www.university.edu/ontology/courses#nomEtudiant>))
+Declaration(NamedIndividual(<http://www.university.edu/ontology/courses#IA-301>))
+Declaration(NamedIndividual(<http://www.university.edu/ontology/courses#IA-401>))
+Declaration(NamedIndividual(<http://www.university.edu/ontology/courses#MATH-101>))
+Declaration(NamedIndividual(<http://www.university.edu/ontology/courses#PROG-101>))
+Declaration(NamedIndividual(<http://www.university.edu/ontology/courses#WEB-201>))
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.university.edu/ontology/courses#aInteretPour> (<http://www.university.edu/ontology/courses#aInteretPour>)
+
+SubObjectPropertyOf(<http://www.university.edu/ontology/courses#aInteretPour> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.university.edu/ontology/courses#aInteretPour> <http://www.university.edu/ontology/courses#Student>)
+ObjectPropertyRange(<http://www.university.edu/ontology/courses#aInteretPour> <http://www.university.edu/ontology/courses#Domain>)
+
+# Object Property: <http://www.university.edu/ontology/courses#aNiveau> (<http://www.university.edu/ontology/courses#aNiveau>)
+
+SubObjectPropertyOf(<http://www.university.edu/ontology/courses#aNiveau> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.university.edu/ontology/courses#aNiveau> <http://www.university.edu/ontology/courses#Course>)
+ObjectPropertyRange(<http://www.university.edu/ontology/courses#aNiveau> <http://www.university.edu/ontology/courses#Level>)
+
+# Object Property: <http://www.university.edu/ontology/courses#aPrerequis> (<http://www.university.edu/ontology/courses#aPrerequis>)
+
+SubObjectPropertyOf(<http://www.university.edu/ontology/courses#aPrerequis> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.university.edu/ontology/courses#aPrerequis> <http://www.university.edu/ontology/courses#Course>)
+ObjectPropertyRange(<http://www.university.edu/ontology/courses#aPrerequis> <http://www.university.edu/ontology/courses#Course>)
+
+# Object Property: <http://www.university.edu/ontology/courses#aSuivi> (<http://www.university.edu/ontology/courses#aSuivi>)
+
+SubObjectPropertyOf(<http://www.university.edu/ontology/courses#aSuivi> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.university.edu/ontology/courses#aSuivi> <http://www.university.edu/ontology/courses#Student>)
+ObjectPropertyRange(<http://www.university.edu/ontology/courses#aSuivi> <http://www.university.edu/ontology/courses#Course>)
+
+# Object Property: <http://www.university.edu/ontology/courses#appartientADomaine> (<http://www.university.edu/ontology/courses#appartientADomaine>)
+
+SubObjectPropertyOf(<http://www.university.edu/ontology/courses#appartientADomaine> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.university.edu/ontology/courses#appartientADomaine> <http://www.university.edu/ontology/courses#Course>)
+ObjectPropertyRange(<http://www.university.edu/ontology/courses#appartientADomaine> <http://www.university.edu/ontology/courses#Domain>)
+
+# Object Property: <http://www.university.edu/ontology/courses#enseigneCompetence> (<http://www.university.edu/ontology/courses#enseigneCompetence>)
+
+SubObjectPropertyOf(<http://www.university.edu/ontology/courses#enseigneCompetence> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.university.edu/ontology/courses#enseigneCompetence> <http://www.university.edu/ontology/courses#Course>)
+ObjectPropertyRange(<http://www.university.edu/ontology/courses#enseigneCompetence> <http://www.university.edu/ontology/courses#Skill>)
+
+# Object Property: <http://www.university.edu/ontology/courses#possèdeCompetence> (<http://www.university.edu/ontology/courses#possèdeCompetence>)
+
+SubObjectPropertyOf(<http://www.university.edu/ontology/courses#possèdeCompetence> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.university.edu/ontology/courses#possèdeCompetence> <http://www.university.edu/ontology/courses#Student>)
+ObjectPropertyRange(<http://www.university.edu/ontology/courses#possèdeCompetence> <http://www.university.edu/ontology/courses#Skill>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.university.edu/ontology/courses#codeCours> (<http://www.university.edu/ontology/courses#codeCours>)
+
+SubDataPropertyOf(<http://www.university.edu/ontology/courses#codeCours> owl:topDataProperty)
+DataPropertyDomain(<http://www.university.edu/ontology/courses#codeCours> <http://www.university.edu/ontology/courses#Course>)
+DataPropertyRange(<http://www.university.edu/ontology/courses#codeCours> xsd:string)
+
+# Data Property: <http://www.university.edu/ontology/courses#credits> (<http://www.university.edu/ontology/courses#credits>)
+
+SubDataPropertyOf(<http://www.university.edu/ontology/courses#credits> owl:topDataProperty)
+DataPropertyDomain(<http://www.university.edu/ontology/courses#credits> <http://www.university.edu/ontology/courses#Course>)
+DataPropertyRange(<http://www.university.edu/ontology/courses#credits> xsd:integer)
+
+# Data Property: <http://www.university.edu/ontology/courses#description> (<http://www.university.edu/ontology/courses#description>)
+
+SubDataPropertyOf(<http://www.university.edu/ontology/courses#description> owl:topDataProperty)
+DataPropertyDomain(<http://www.university.edu/ontology/courses#description> <http://www.university.edu/ontology/courses#Course>)
+DataPropertyRange(<http://www.university.edu/ontology/courses#description> xsd:string)
+
+# Data Property: <http://www.university.edu/ontology/courses#difficulte> (<http://www.university.edu/ontology/courses#difficulte>)
+
+SubDataPropertyOf(<http://www.university.edu/ontology/courses#difficulte> owl:topDataProperty)
+DataPropertyDomain(<http://www.university.edu/ontology/courses#difficulte> <http://www.university.edu/ontology/courses#Course>)
+DataPropertyRange(<http://www.university.edu/ontology/courses#difficulte> xsd:integer)
+
+# Data Property: <http://www.university.edu/ontology/courses#duree> (<http://www.university.edu/ontology/courses#duree>)
+
+SubDataPropertyOf(<http://www.university.edu/ontology/courses#duree> owl:topDataProperty)
+DataPropertyDomain(<http://www.university.edu/ontology/courses#duree> <http://www.university.edu/ontology/courses#Course>)
+DataPropertyRange(<http://www.university.edu/ontology/courses#duree> xsd:integer)
+
+# Data Property: <http://www.university.edu/ontology/courses#emailEtudiant> (<http://www.university.edu/ontology/courses#emailEtudiant>)
+
+SubDataPropertyOf(<http://www.university.edu/ontology/courses#emailEtudiant> owl:topDataProperty)
+DataPropertyDomain(<http://www.university.edu/ontology/courses#emailEtudiant> <http://www.university.edu/ontology/courses#Student>)
+DataPropertyRange(<http://www.university.edu/ontology/courses#emailEtudiant> xsd:string)
+
+# Data Property: <http://www.university.edu/ontology/courses#nomCompetence> (<http://www.university.edu/ontology/courses#nomCompetence>)
+
+SubDataPropertyOf(<http://www.university.edu/ontology/courses#nomCompetence> owl:topDataProperty)
+DataPropertyDomain(<http://www.university.edu/ontology/courses#nomCompetence> <http://www.university.edu/ontology/courses#Skill>)
+DataPropertyRange(<http://www.university.edu/ontology/courses#nomCompetence> xsd:string)
+
+# Data Property: <http://www.university.edu/ontology/courses#nomCours> (<http://www.university.edu/ontology/courses#nomCours>)
+
+SubDataPropertyOf(<http://www.university.edu/ontology/courses#nomCours> owl:topDataProperty)
+DataPropertyDomain(<http://www.university.edu/ontology/courses#nomCours> <http://www.university.edu/ontology/courses#Course>)
+DataPropertyRange(<http://www.university.edu/ontology/courses#nomCours> xsd:string)
+
+# Data Property: <http://www.university.edu/ontology/courses#nomDomaine> (<http://www.university.edu/ontology/courses#nomDomaine>)
+
+SubDataPropertyOf(<http://www.university.edu/ontology/courses#nomDomaine> owl:topDataProperty)
+DataPropertyDomain(<http://www.university.edu/ontology/courses#nomDomaine> <http://www.university.edu/ontology/courses#Domain>)
+DataPropertyRange(<http://www.university.edu/ontology/courses#nomDomaine> xsd:string)
+
+# Data Property: <http://www.university.edu/ontology/courses#nomEtudiant> (<http://www.university.edu/ontology/courses#nomEtudiant>)
+
+SubDataPropertyOf(<http://www.university.edu/ontology/courses#nomEtudiant> owl:topDataProperty)
+DataPropertyDomain(<http://www.university.edu/ontology/courses#nomEtudiant> <http://www.university.edu/ontology/courses#Student>)
+DataPropertyRange(<http://www.university.edu/ontology/courses#nomEtudiant> xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.university.edu/ontology/courses#CourseBDD> (<http://www.university.edu/ontology/courses#CourseBDD>)
+
+SubClassOf(<http://www.university.edu/ontology/courses#CourseBDD> <http://www.university.edu/ontology/courses#CourseInformatique>)
+
+# Class: <http://www.university.edu/ontology/courses#CourseIA> (<http://www.university.edu/ontology/courses#CourseIA>)
+
+SubClassOf(<http://www.university.edu/ontology/courses#CourseIA> <http://www.university.edu/ontology/courses#CourseInformatique>)
+
+# Class: <http://www.university.edu/ontology/courses#CourseInformatique> (<http://www.university.edu/ontology/courses#CourseInformatique>)
+
+SubClassOf(<http://www.university.edu/ontology/courses#CourseInformatique> <http://www.university.edu/ontology/courses#Course>)
+
+# Class: <http://www.university.edu/ontology/courses#CourseMathematiques> (<http://www.university.edu/ontology/courses#CourseMathematiques>)
+
+SubClassOf(<http://www.university.edu/ontology/courses#CourseMathematiques> <http://www.university.edu/ontology/courses#Course>)
+
+# Class: <http://www.university.edu/ontology/courses#CourseWeb> (<http://www.university.edu/ontology/courses#CourseWeb>)
+
+SubClassOf(<http://www.university.edu/ontology/courses#CourseWeb> <http://www.university.edu/ontology/courses#CourseInformatique>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.university.edu/ontology/courses#IA-301> (<http://www.university.edu/ontology/courses#IA-301>)
+
+ClassAssertion(<http://www.university.edu/ontology/courses#CourseIA> <http://www.university.edu/ontology/courses#IA-301>)
+ObjectPropertyAssertion(<http://www.university.edu/ontology/courses#aPrerequis> <http://www.university.edu/ontology/courses#IA-301> <http://www.university.edu/ontology/courses#PROG-101>)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#codeCours> <http://www.university.edu/ontology/courses#IA-301> "IA-401")
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#credits> <http://www.university.edu/ontology/courses#IA-301> "6"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#difficulte> <http://www.university.edu/ontology/courses#IA-301> "3"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#duree> <http://www.university.edu/ontology/courses#IA-301> "50"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#nomCours> <http://www.university.edu/ontology/courses#IA-301> "Introduction à l'IA")
+
+# Individual: <http://www.university.edu/ontology/courses#IA-401> (<http://www.university.edu/ontology/courses#IA-401>)
+
+ClassAssertion(<http://www.university.edu/ontology/courses#CourseIA> <http://www.university.edu/ontology/courses#IA-401>)
+ObjectPropertyAssertion(<http://www.university.edu/ontology/courses#aPrerequis> <http://www.university.edu/ontology/courses#IA-401> <http://www.university.edu/ontology/courses#IA-301>)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#codeCours> <http://www.university.edu/ontology/courses#IA-401> "IA-401")
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#credits> <http://www.university.edu/ontology/courses#IA-401> "6"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#difficulte> <http://www.university.edu/ontology/courses#IA-401> "5"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#duree> <http://www.university.edu/ontology/courses#IA-401> "55"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#nomCours> <http://www.university.edu/ontology/courses#IA-401> "Deep Learning")
+
+# Individual: <http://www.university.edu/ontology/courses#MATH-101> (<http://www.university.edu/ontology/courses#MATH-101>)
+
+ClassAssertion(<http://www.university.edu/ontology/courses#CourseMathematiques> <http://www.university.edu/ontology/courses#MATH-101>)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#codeCours> <http://www.university.edu/ontology/courses#MATH-101> "MATH-101")
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#credits> <http://www.university.edu/ontology/courses#MATH-101> "5"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#difficulte> <http://www.university.edu/ontology/courses#MATH-101> "3"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#duree> <http://www.university.edu/ontology/courses#MATH-101> "40"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#nomCours> <http://www.university.edu/ontology/courses#MATH-101> "Algèbre Linéaire")
+
+# Individual: <http://www.university.edu/ontology/courses#PROG-101> (<http://www.university.edu/ontology/courses#PROG-101>)
+
+ClassAssertion(<http://www.university.edu/ontology/courses#Course> <http://www.university.edu/ontology/courses#PROG-101>)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#codeCours> <http://www.university.edu/ontology/courses#PROG-101> "PROG-101")
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#credits> <http://www.university.edu/ontology/courses#PROG-101> "6"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#description> <http://www.university.edu/ontology/courses#PROG-101> "Bases de Python")
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#difficulte> <http://www.university.edu/ontology/courses#PROG-101> "2"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#duree> <http://www.university.edu/ontology/courses#PROG-101> "45"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#nomCours> <http://www.university.edu/ontology/courses#PROG-101> "Introduction à la Programmation")
+
+# Individual: <http://www.university.edu/ontology/courses#WEB-201> (<http://www.university.edu/ontology/courses#WEB-201>)
+
+ClassAssertion(<http://www.university.edu/ontology/courses#CourseWeb> <http://www.university.edu/ontology/courses#WEB-201>)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#codeCours> <http://www.university.edu/ontology/courses#WEB-201> "WEB-201")
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#credits> <http://www.university.edu/ontology/courses#WEB-201> "5"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#difficulte> <http://www.university.edu/ontology/courses#WEB-201> "3"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#duree> <http://www.university.edu/ontology/courses#WEB-201> "40"^^xsd:decimal)
+DataPropertyAssertion(<http://www.university.edu/ontology/courses#nomCours> <http://www.university.edu/ontology/courses#WEB-201> "Développement Web")
+
+
+)

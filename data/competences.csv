@@ -1,0 +1,42 @@
+cours,competence
+PROG-101,Programmation Python
+PROG-101,Algorithmes de base
+PROG-101,Structures de données
+PROG-201,POO
+PROG-201,Design Patterns
+PROG-201,Clean Code
+MATH-101,Algèbre linéaire
+MATH-101,Matrices
+MATH-201,Probabilités
+MATH-201,Statistiques
+MATH-201,Calcul différentiel
+MATH-301,Optimisation
+IA-301,Machine Learning
+IA-301,Scikit-learn
+IA-301,Régression
+IA-301,Classification
+IA-401,Deep Learning
+IA-401,TensorFlow
+IA-401,PyTorch
+IA-401,CNN
+IA-501,Recherche en IA
+IA-501,State of the art
+WEB-201,HTML CSS
+WEB-201,JavaScript
+WEB-201,React
+WEB-301,Node.js
+WEB-301,API REST
+WEB-301,Déploiement
+BDD-201,SQL
+BDD-201,Modélisation
+BDD-301,NoSQL
+BDD-301,MongoDB
+BDD-301,Big Data
+CLOUD-301,AWS
+CLOUD-301,Azure
+CLOUD-301,Docker
+SECURITY-301,Cryptographie
+SECURITY-301,Sécurité réseau
+MOBILE-301,iOS
+MOBILE-301,Android
+MOBILE-301,React Native
