@@ -1,0 +1,13 @@
+# Interface
+streamlit==1.29.0
+streamlit-aggrid==0.3.4
+
+# Visualisation
+pyvis==0.3.2
+networkx==3.2.1
+plotly==5.18.0
+matplotlib==3.8.2
+
+# Utilitaires
+pandas==2.1.4
+python-dotenv==1.0.0
