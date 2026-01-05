@@ -18,9 +18,9 @@ class KnowledgeBase:
     """
     
     def __init__(self, fuseki_url: str = "http://localhost:3030", 
-             dataset_name: str = "university",
-             username: str = "admin",
-             password: str = "admin123"):
+                 dataset_name: str = "university",
+                 username: str = "admin",
+                 password: str = "admin123"):
         """
         Initialise la connexion à Fuseki
         
@@ -40,12 +40,12 @@ class KnowledgeBase:
         # Configuration SPARQLWrapper pour les requêtes
         self.sparql_query = SPARQLWrapper(self.query_endpoint)
         self.sparql_query.setReturnFormat(JSON)
-        self.sparql_query.setCredentials(username, password)  # ← AJOUT
+        self.sparql_query.setCredentials(username, password)
         
         # Configuration pour les updates
         self.sparql_update = SPARQLWrapper(self.update_endpoint)
         self.sparql_update.setMethod(POST)
-        self.sparql_update.setCredentials(username, password)  # ← AJOUT
+        self.sparql_update.setCredentials(username, password)
             
         # Namespace de l'ontologie
         self.ns = Namespace("http://www.university.edu/ontology/courses#")
@@ -97,6 +97,12 @@ class KnowledgeBase:
     
     
     def get_all_courses(self) -> List[Dict]:
+        """
+        Récupère tous les cours de la base
+        
+        Returns:
+            Liste de tous les cours
+        """
         query = """
         PREFIX course: <http://www.university.edu/ontology/courses#>
         PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
@@ -130,9 +136,10 @@ class KnowledgeBase:
         query = f"""
         PREFIX course: <http://www.university.edu/ontology/courses#>
         
-        SELECT ?cours ?nom ?credits ?duree ?description ?difficulte
+        SELECT ?cours ?code ?nom ?credits ?duree ?description ?difficulte
         WHERE {{
             ?cours course:codeCours "{code_cours}" .
+            BIND("{code_cours}" AS ?code)
             OPTIONAL {{ ?cours course:nomCours ?nom }}
             OPTIONAL {{ ?cours course:credits ?credits }}
             OPTIONAL {{ ?cours course:duree ?duree }}
@@ -181,8 +188,8 @@ class KnowledgeBase:
             self.execute_query(query)
             logger.info("✅ Connexion à Fuseki OK")
             return True
-        except:
-            logger.error("❌ Impossible de se connecter à Fuseki")
+        except Exception as e:
+            logger.error(f"❌ Impossible de se connecter à Fuseki: {e}")
             return False
 
 
@@ -209,5 +216,15 @@ if __name__ == "__main__":
         if results:
             count = results[0]['count']['value']
             print(f"📊 Nombre de triplets dans la base : {count}")
+        
+        # Test : Récupérer quelques cours
+        print("\n📚 Quelques cours dans la base:")
+        courses = kb.get_all_courses()
+        for course in courses[:5]:
+            code = course.get('code', {}).get('value', 'N/A')
+            nom = course.get('nom', {}).get('value', 'N/A')
+            print(f"   - {code}: {nom}")
     else:
         print("\n❌ Connexion échouée. Vérifie que Fuseki tourne !")
+        print("\n💡 Pour démarrer Fuseki:")
+        print("   docker-compose up -d fuseki")

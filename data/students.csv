@@ -1,0 +1,11 @@
+student_id,nom,prenom,interets,competences,cours_suivis
+STU-001,Dupont,Marie,"Intelligence Artificielle,Mathematiques","Python,Algebre Lineaire","PROG-101,MATH-101"
+STU-002,Martin,Pierre,"Developpement Web,Base de Donnees","JavaScript,SQL","PROG-101,WEB-201"
+STU-003,Benali,Fatima,"Intelligence Artificielle,Cloud","Python,Machine Learning","PROG-101,MATH-101,IA-301"
+STU-004,Chen,Wei,"Securite,Reseaux","Cryptographie,Linux","PROG-101,SECURITY-201"
+STU-005,Garcia,Carlos,"Mobile,Web","Kotlin,React","PROG-101,WEB-201,MOBILE-301"
+STU-006,Ahmed,Youssef,"Data Science,IA","Python,R,Statistics","PROG-101,MATH-101,MATH-201"
+STU-007,Lefebvre,Sophie,"Cloud,DevOps","Docker,Kubernetes","PROG-101,CLOUD-201"
+STU-008,Silva,Ana,"Base de Donnees,Big Data","SQL,NoSQL,Hadoop","PROG-101,BDD-201"
+STU-009,Kim,MinJun,"IA,Robotique","Python,C++,ROS","PROG-101,MATH-101,IA-301,MATH-301"
+STU-010,Dubois,Thomas,"Blockchain,Securite","Solidity,Cryptographie","PROG-101,SECURITY-201,BLOCKCHAIN-301"
